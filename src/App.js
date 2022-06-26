@@ -18,7 +18,7 @@ const App = () => {
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
 
-        if (data.Response == "False") {
+        if (data.Response === "False") {
             data.Search = "";
         }
         setMovies(data.Search);
